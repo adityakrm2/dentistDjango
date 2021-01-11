@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %} Dental Clinic {% endblock %}</title>
+<link rel="stylesheet" href={% static 'website/css/bootstrap.min.css' %}>
+<link rel="stylesheet" href={% static 'website/css/flexslider.css' %}>
+<link rel="stylesheet" href={% static 'website/css/main.css' %}>
+<link rel="stylesheet" href={% static 'website/css/jquery.fancybox.css' %}>
+<link rel="stylesheet" href={% static 'website/css/responsive.css' %}>
+<link rel="stylesheet" href={% static 'website/css/font-icon.css' %}>
+<!--<link rel="stylesheet" href={% static 'website/css/animate.min.css' %}> -->
+<link rel="stylesheet" href={% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' %}>
+<link rel="icon" type="image/png" href={% static 'website/images/fav.png' %}>
+</head>
+
+<body>
+<!-- header section -->
+<section class="banner" role="banner">
+  <header id="header">
+    <div class="header-content clearfix"> <a class="logo" href="index.html"><i class="icon icon-anchor"></i> Dentist</a>
+      <nav class="navigation" role="navigation">
+        <ul class="primary-nav">
+		 <li><a href="#banner">Home</a></li>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#content-3-10">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#teams">Our Team</a></li>
+          <li><a href="#testimonials">Testimonials</a></li><!-- section id's href -->
+          <li><a href= "contact.html" target="_blank" >Contact</a></li> 
+        </ul>
+      </nav>
+      <a href="#" class="nav-toggle">Menu<span></span></a> </div>
+  </header>
+  <!-- banner text {% static 'website/' %} -->
+    <div class="banner" id="banner">
+	<div class="slider-banner">
+            <div data-lazy-background={% static 'website/images/slides/1.jpg' %}>
+                <h3 data-pos="['68%', '-40%', '60%', '12%']" data-duration="700" data-effect="move">
+                    Dental Clinic
+                </h3> <br>
+                <p data-pos="['75%', '110%', '75%', '12%']" data-duration="700" data-effect="move">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+            </div>
+
+            <div data-lazy-background={% static 'website/images/slides/2.jpg' %}>
+                <h3 data-pos="['68%', '-40%', '60%', '12%']" data-duration="700" data-effect="move">
+                    Dental Clinic
+                </h3> <br>
+                <p data-pos="['75%', '110%', '75%', '12%']" data-duration="700" data-effect="move">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+            </div>
+            <div data-lazy-background={% static 'website/images/slides/3.jpg' %}>
+                <h3 data-pos="['75%', '-40%', '60%', '12%']" data-duration="700" data-effect="move">
+                    Beautiful Smile
+                </h3> <br>
+                <p data-pos="['75%', '110%', '75%', '12%']" data-duration="700" data-effect="move">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                </p>
+            </div>
+
+        </div>
+      <!-- banner text -->
+    </div>
+</section>
+
+{% block content %}
+
+
+
+{% endblock %}
+
+<footer class="footer">
+<div class="container-fluid">
+<div id="map-row" class="row">
+    <div class="col-xs-12">
+    	<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1332.2340440303212!2d86.98811531572235!3d25.25810778424301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f03705261123d5%3A0xf1e747bfec10ba17!2sKali%20Mandir!5e0!3m2!1sen!2sin!4v1609544756832!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      
+
+          <div id="map-overlay" class="col-xs-5 col-xs-offset-6" style="">
+    		<h2 style="margin-top:0;color:#fff;">Contact us</h2>
+    		<address style="color:#fff;">
+    			<strong>Company name</strong><br>
+    			1234 Street Dr.<br>
+    			Vancouver, BC<br>
+    			Canada<br>
+    			V6G 1G9<br>
+    			<abbr title="Phone">Tel:</abbr> (604) 555-4321
+    		</address>
+			  
+    	</div>
+    </div>
+	 </div>
+</div>
+</footer>
+<!-- Footer section -->
+<!-- JS FILES -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src={% static 'website/js/bootstrap.min.js' %}></script>
+<script src={% static 'website/js/jquery.flexslider-min.js' %}></script>
+<script src={% static 'website/js/jquery.fancybox.pack.js' %}></script>
+<script src={% static 'website/js/modernizr.js' %}></script>
+<script src={% static 'website/js/main.js' %}></script>
+<script type="text/javascript" src={% static 'website/js/jquery.contact.js' %}></script>
+<script type="text/javascript" src={% static 'website/js/jquery.devrama.slider.min-0.9.4.js' %}></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slider-banner').DrSlider({
+				'transition': 'fade',
+				showNavigation: false,
+				progressColor: "#03A9F4"
+			});
+		});
+	</script>
+</body>
+</html>
